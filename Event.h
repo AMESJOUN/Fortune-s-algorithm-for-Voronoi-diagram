@@ -20,9 +20,11 @@ public:
 		arch = 0;
 	}
 
-	/*
-	need function for comparing two events
-	*/
+	//function for comparing two events
+	struct CompareEvent : public std::binary_function<Event*, Event*, bool>
+	{
+		bool operator()(const Event* l, const Event* r) const { return (l->y < r->y); }
+	};
 	
 };
 
