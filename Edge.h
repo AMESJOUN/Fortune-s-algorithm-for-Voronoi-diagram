@@ -9,10 +9,12 @@ class Edge
 private:
 	Point *	begin;
 	Point *	end;
-	Point *	direction;
-	Point *	left;
-	Point *	right;
+	Point *	direction; // directional vector
+	Point *	left;  // pointer to Voronoi place on the left side of edge 
+	Point *	right; // pointer to Voronoi place on the right side of edge
+	Edge * neighbour; //edges can consist of two parts, neighbour is the pointer to another part (connecting in the end of algorithm)
 
+	//edge lies on the line: y = k*x + b;
 	double		k;
 	double		b;
 
