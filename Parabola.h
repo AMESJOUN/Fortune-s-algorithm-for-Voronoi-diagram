@@ -6,6 +6,8 @@
 
 class Event; //Parabola has pointer to class Event and class Event has pointer to Parabola
 
+ /* Class of archs of parabolas or an intersection between two archs -- edge
+			 It's a binary tree, where internal nodes are edges, leaves are archs) */
 class Parabola
 {
 public:
